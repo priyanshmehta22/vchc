@@ -1,0 +1,24 @@
+{
+  "login": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "id": 1
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "id": 2
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "a",
+      "id": 3
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "a",
+      "id": 4
+    }
+  ]
+}
