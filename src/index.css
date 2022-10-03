@@ -64,11 +64,12 @@ form {
 
 .signin-up {
   text-decoration: none;
-  background-color: gray;
+  background-color: black;
+  color: white;
   display: flex;
-  padding-left: 30px;
-  margin: 30px;
-  font-size: 20px;
+  padding-left: 5%;
+  /* margin: 30px; */
+  font-size: 1.8rem;
 }
 .float-right {
   padding: 10px;
@@ -76,12 +77,12 @@ form {
 }
 
 .button {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .button:hover {
   cursor: pointer;
-  color: white;
+  color: rgb(255, 82, 82);
 }
 
 #loginbtn {

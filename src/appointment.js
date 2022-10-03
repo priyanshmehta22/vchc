@@ -34,16 +34,21 @@ const Appointment = () => {
       .catch((error) => {
         console.log(error);
       });
+    window.alert("Appointment booked successfully");
   };
 
   return (
-    <div className="appointment">
+    <div className="Login center">
       <Form onSubmit={handlesubmit}>
         <Form.Group size="lg" controlId="name">
-          <Form.Label> Patient Name</Form.Label>
+          <Form.Label>
+            <b>PATIENT NAME</b>
+          </Form.Label>
 
           <Form.Control
             autoFocus
+            required
+            className="inputsignup pn"
             type="text"
             value={pname}
             onChange={(e) => setPname(e.target.value)}
@@ -51,10 +56,13 @@ const Appointment = () => {
         </Form.Group>
 
         <Form.Group size="lg" controlId="age">
-          <Form.Label> Patient Age</Form.Label>
+          <Form.Label>
+            <b>PATIENT AGE</b>
+          </Form.Label>
 
           <Form.Control
-            autoFocus
+            required
+            className="inputsignup pa"
             type="number"
             value={age}
             onChange={(e) => setAge(e.target.value)}
@@ -62,28 +70,47 @@ const Appointment = () => {
         </Form.Group>
 
         <Form.Group size="lg" controlId="date">
-          <Form.Label>Appointment Date</Form.Label>
+          <Form.Label className="pdl">
+            <b>APPOINTMENT DATE</b>
+          </Form.Label>
           <Form.Control
+            className="inputsignup pd"
+            required
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
         </Form.Group>
-        <Form.Group size="lg" controlId="time">
-          <Form.Label>Appointment Time</Form.Label>
+        <Form.Group size="lg" controlId="time at">
+          <Form.Label className="at">
+            <b>APPOINTMENT TIME</b>
+          </Form.Label>
           <Form.Control
+            className="inputsignup at"
+            required
             type="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
           />
         </Form.Group>
-
-        {!isloading && (
-          <Button block size="lg" type="submit" id="submitlogin">
-            Submit
+        <div className="signupbtn3">
+          {!isloading && (
+            <Button
+              className="inputsignup"
+              block
+              size="lg"
+              type="submit"
+              id="submitlogin"
+            >
+              Submit
+            </Button>
+          )}
+        </div>
+        {isloading && (
+          <Button className="signupbtn3" restricted>
+            Booking Appointment..
           </Button>
         )}
-        {isloading && <Button restricted>Booking Appointment..</Button>}
       </Form>
     </div>
   );

@@ -19,6 +19,26 @@
       "email": "a@gmail.com",
       "password": "a",
       "id": 4
+    },
+    {
+      "email": "priyansh.mehta2020@vitstudent.ac.in",
+      "password": "a",
+      "id": 5
+    },
+    {
+      "email": "priyansh.mehta2020@vitstudent.ac.in",
+      "password": "a",
+      "id": 6
+    },
+    {
+      "email": "priyansh.mehta2020@vitstudent.ac.in",
+      "password": "s",
+      "id": 7
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "a",
+      "id": 8
     }
   ]
 }

@@ -283,6 +283,20 @@
       "password": "a",
       "number": "+919057572696",
       "id": 46
+    },
+    {
+      "name": "Priyansh Mehta",
+      "email": "priyansh.mehta2020@vitstudent.ac.in",
+      "password": "a",
+      "number": "5353",
+      "id": 47
+    },
+    {
+      "name": "Aditya Mohite",
+      "email": "amohite7100@gmail.com",
+      "password": "Sept@2020",
+      "number": "8169394959",
+      "id": 48
     }
   ]
 }

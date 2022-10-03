@@ -37,35 +37,54 @@ const Login = () => {
     // window.location.href = "/";
   };
   return (
-    <div className="Login">
+    <div className="Login center">
       <Form onSubmit={handlesubmit}>
         <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label>
+            <b>EMAIL </b>
+          </Form.Label>
 
           <Form.Control
             autoFocus
+            required
+            className="inputsignup"
             type="email"
             value={email}
             onChange={(e) => setemail(e.target.value)}
           />
         </Form.Group>
 
-        <Form.Group size="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
+        <Form.Group size="lg" controlId="password" className="pass">
+          <Form.Label>
+            <b>PASSWORD </b>
+          </Form.Label>
 
           <Form.Control
+            required
+            className="inputsignup"
             type="password"
             value={password}
             onChange={(e) => setpassword(e.target.value)}
           />
         </Form.Group>
-
-        {!isloading && (
-          <Button block size="lg" type="submit" id="submitlogin">
-            Submit
+        <div className="signupbtn2">
+          {!isloading && (
+            <Button
+              className="inputsignup"
+              block
+              size="lg"
+              type="submit"
+              id="submitlogin"
+            >
+              Submit
+            </Button>
+          )}
+        </div>
+        {isloading && (
+          <Button className="signupbtn2" restricted>
+            Logging In...
           </Button>
         )}
-        {isloading && <Button restricted>Logging In...</Button>}
       </Form>
     </div>
   );

@@ -1,17 +1,23 @@
 .navbar {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  padding: 10px;
-  height: 50px;
-  margin: 10px;
-  margin-top: 50px;
+  padding: 1%;
+  height: 8rem;
+  width: 100%;
+  padding-top: 4%;
+  background-color: rgb(255, 73, 73);
 }
 
 .nav-items {
-  color: black;
+  color: white;
   text-decoration: none;
-  padding: 30px;
-  font-size: 20px;
+  padding: 2%;
+  font-size: 1.8em;
+}
+.nav-items:hover {
+  color: black;
 }
 
 .container {
@@ -19,6 +25,7 @@
 }
 
 .navbar-placement {
+  /* padding-top: 1%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,8 +40,9 @@
 
 #intro-heading {
   text-align: center;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   font-size: large;
+  /* background-color: lightblue; */
 }
 #degrees {
   text-align: center;
@@ -52,9 +60,9 @@
 .vchc-heading {
   position: absolute;
 
-  right: 500px;
-  color: Black;
-  font-size: 30px;
+  left: 25%;
+  color: white;
+  font-size: 3rem;
   font-family: "Bree serif", serif;
 
   z-index: 1;
@@ -67,13 +75,13 @@
 }
 @keyframes pri3 {
   0% {
-    right: 750px;
+    right: 40%;
   }
   50% {
-    right: 550px;
+    right: 35%;
   }
   100% {
-    right: 750px;
+    right: 40%;
   }
 }
 
@@ -285,4 +293,239 @@
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  height: 120vh;
+  width: 100%;
+}
+.create2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+.create2 input,
+.create2 textarea,
+.create2 select {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.create input,
+.create textarea,
+.create select {
+  margin: 1%;
+  font-size: 1.2rem;
+  height: 100%;
+
+  padding: 15%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  height: 100%;
+}
+
+.create button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(243, 82, 82);
+}
+.create2 button {
+  margin: 3%;
+  padding: 5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(243, 82, 82);
+}
+
+.review-view {
+  text-decoration: none;
+  border: 2px solid rgb(152, 149, 149);
+  box-shadow: 2px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  width: 30%;
+  margin: 1%;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+.revrat {
+}
+.red {
+  color: purple;
+}
+.reviews {
+  /* background-color: red; */
+  color: black;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0px auto; */
+  width: 100%;
+  font-size: 1.2rem;
+  /* height: 10%; */
+}
+
+.review-view:hover {
+  box-shadow: 2px 2px 10px #ccc;
+  width: 100%;
+  border: 2px solid #eaeaea;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.signin-up {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  display: flex;
+  padding-left: 5%;
+  /* margin: 30px; */
+  font-size: 1.8rem;
+}
+.float-right {
+  padding: 10px;
+  margin: 10px;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+}
+.button:hover {
+  cursor: pointer;
+  color: rgb(255, 82, 82);
+}
+
+#loginbtn {
+  position: fixed;
+  right: 100px;
+}
+#signupbtn {
+  position: fixed;
+  right: 250px;
+}
+.large-font {
+  margin-top: 5%;
+  color: rgb(255, 82, 82);
+  font-size: 2rem;
+}
+.submitBtn {
+  padding: 10%;
+  /* height: 20vh; */
+  margin: 5%;
+  font-size: 1.2rem;
+  color: white;
+}
+.submitBtn:hover {
+  color: black;
+}
+.center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.Login {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.inputsignup {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 1%;
+  padding: 1%;
+  font-size: 1.2rem;
+}
+.ph {
+  position: relative;
+  right: 18px;
+}
+.pass {
+  position: relative;
+  right: 20px;
+}
+.con {
+  position: relative;
+  right: 59px;
+}
+.signupbtn {
+  position: fixed;
+  right: 20%;
+  top: 90%;
+  width: 60%;
+}
+.signupbtn2 {
+  position: fixed;
+  right: 20%;
+  top: 55%;
+  width: 60%;
+}
+.signupbtn3 {
+  position: fixed;
+  right: 20%;
+  top: 80%;
+  width: 60%;
+}
+.pa {
+  position: relative;
+  left: 8px;
+}
+.pd {
+  position: relative;
+  right: 21px;
+}
+.pdl {
+  position: relative;
+  right: 21px;
+}
+.at {
+  position: relative;
+  right: 21px;
 }

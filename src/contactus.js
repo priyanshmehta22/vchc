@@ -38,26 +38,33 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="create">
+    <div className="create2">
       <div className="contact-form">
         <h2>Have some query? Write here🧑‍⚕️</h2>
         <form onSubmit={handlesubmit}>
-          <label>Email</label>
+          <label>
+            <b>EMAIL</b>
+          </label>
           <input
+            autoFocus
             type="email"
             name="title"
             required
             value={email}
             onChange={(e) => setemail(e.target.value)}
           />
-          <label>Name</label>
+          <label>
+            <b>NAME</b>
+          </label>
           <input
             type="text"
             value={name}
             onChange={(e) => setname(e.target.value)}
             required
           ></input>
-          <label>Phone No</label>
+          <label>
+            <b>PHONE NO.</b>
+          </label>
           <input
             type="text"
             name="phone"
@@ -65,7 +72,9 @@ const ContactUs = () => {
             onChange={(e) => setphone(e.target.value)}
             required
           ></input>
-          <label>Message</label>
+          <label>
+            <b>MESSAGE</b>
+          </label>
           <textarea
             required
             value={message}
