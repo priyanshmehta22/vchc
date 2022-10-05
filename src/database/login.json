@@ -39,6 +39,11 @@
       "email": "a@gmail.com",
       "password": "a",
       "id": 8
+    },
+    {
+      "email": "priyansh.mehta2020@vitstudent.ac.in",
+      "password": "sdad",
+      "id": 9
     }
   ]
 }

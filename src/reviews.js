@@ -41,6 +41,7 @@ const Reviews = (review) => {
       .catch((error) => {
         console.log(error);
       });
+    // window.alert("Review submitted successfully");
     //redirect to home page
     // window.location.href = "/";
   };
@@ -66,8 +67,8 @@ const Reviews = (review) => {
   getreviews();
 
   return (
-    <div className="create">
-      <h2>How was your experience!🏥</h2>
+    <div className="create white">
+      <h2 class>How was your experience!🏥</h2>
       <form onSubmit={handlesubmit}>
         <label>
           <h3>NAME</h3>
@@ -85,7 +86,6 @@ const Reviews = (review) => {
         </label>
         <textarea
           required
-          columns="30"
           value={message}
           onChange={(e) => setmessage(e.target.value)}
         ></textarea>
@@ -100,9 +100,9 @@ const Reviews = (review) => {
         {isloading && <button restricted>Submitting review...</button>}
       </form>
       <div>
-        <h2>{name}</h2>
-        <p>{message}</p>
-        <p> {rating} </p>
+        {/* <h2>{name}</h2> */}
+        {/* <p>{message}</p> */}
+        {/* <p className="white"> {rating} </p> */}
       </div>
 
       <div className="reviews">
@@ -120,26 +120,6 @@ const Reviews = (review) => {
             </p>
           </div>
         ))}
-      </div>
-
-      <div className="slider">
-        <div className="slide">
-          <div className="testimonial">
-            {data.map((reviews) => (
-              <div key={reviews.id}>
-                <Link to={`Reviews/${reviews.name}`}></Link>
-                <h5 className="testimonial__header">{reviews.name}</h5>
-                <p className="testimonial__text">{reviews.message}</p>
-
-                <h6 className="testimonial__name">Rating: {reviews.rating}</h6>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <button className="slider__btn slider__btn--left">&larr;</button>
-        <button className="slider__btn slider__btn--right">&rarr;</button>
-        <div className="dots"></div>
       </div>
     </div>
   );

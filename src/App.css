@@ -4,6 +4,7 @@
   align-items: center;
   text-decoration: none;
   padding: 1%;
+  margin: 0;
   height: 8rem;
   width: 100%;
   padding-top: 4%;
@@ -14,6 +15,7 @@
   color: white;
   text-decoration: none;
   padding: 2%;
+  margin: 0;
   font-size: 1.8em;
 }
 .nav-items:hover {
@@ -22,6 +24,8 @@
 
 .container {
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar-placement {
@@ -29,6 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 .intro {
@@ -60,14 +65,14 @@
 .vchc-heading {
   position: absolute;
 
-  left: 25%;
+  left: 5%;
   color: white;
   font-size: 3rem;
   font-family: "Bree serif", serif;
 
   z-index: 1;
   animation: pri3;
-  animation-duration: 10s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
 
   animation-fill-mode: forwards;
@@ -75,13 +80,13 @@
 }
 @keyframes pri3 {
   0% {
-    right: 40%;
+    left: 5%;
   }
   50% {
-    right: 35%;
+    left: 12%;
   }
   100% {
-    right: 40%;
+    left: 5%;
   }
 }
 
@@ -122,10 +127,17 @@
 }
 
 .info {
-  font-size: 20px;
+  /* border: 2px solid black */
+  border-radius: 5px;
+
+  /* background-color: white; */
+  font-size: 1.5rem;
   font-family: "Bree serif", serif;
   color: black;
-  margin: 50px;
+  margin: 2%;
+}
+a {
+  color: black;
 }
 .slider {
   max-width: 100rem;
@@ -315,9 +327,12 @@ code {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin: 0px auto;
+  margin: 0;
   height: 120vh;
   width: 100%;
+  background-image: url("https://img.freepik.com/free-photo/collage-customer-experience-concept_23-2149367139.jpg?w=996&t=st=1664863175~exp=1664863775~hmac=79675d3f06dba7569c471f35d7a0ed9c26b473d7916ae5b741942d947e2b0c26");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .create2 {
   display: flex;
@@ -325,7 +340,7 @@ code {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin: 0px auto;
+  margin: 0;
 }
 .create2 input,
 .create2 textarea,
@@ -378,7 +393,18 @@ form {
   margin: 10px;
   padding: 10px;
 }
-
+.background {
+  background-image: url("https://img.freepik.com/premium-photo/doctor-diagnose-cure-disease-patient-heart-stethoscope-medical-health-check-up-healt_38021-164.jpg?w=996");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  height: 100vh;
+  width: 100%;
+}
+input,
+textarea {
+  box-shadow: 1px 1px 1px 1px rgb(7, 7, 7);
+}
 .review {
   display: flex;
   flex-direction: column;
@@ -386,27 +412,39 @@ form {
   align-items: center;
   justify-content: center;
   padding: 1%;
-  width: 30%;
-  margin: 1%;
-  border: 1px solid black;
-  border-radius: 5%;
+  width: 25%;
+  margin: 2%;
+  border: 2px solid white;
+  border-radius: 3%;
+  box-shadow: 2px 2px 2px 2px white;
+}
+.review:hover {
+  box-shadow: 3px 3px 3px 3px white;
+  /* transform: scale(1.1); */
 }
 .revrat {
 }
 .red {
-  color: purple;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.white {
+  color: white;
+  /* font-size: 1.3rem; */
 }
 .reviews {
-  /* background-color: red; */
-  color: black;
+  /* background-color: black; */
+  color: white;
   display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
   justify-content: center;
-  /* margin: 0px auto; */
+  margin: 0;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+
   /* height: 10%; */
 }
 
@@ -425,7 +463,7 @@ form {
   color: white;
   display: flex;
   padding-left: 5%;
-  /* margin: 30px; */
+  margin: 0;
   font-size: 1.8rem;
 }
 .float-right {
@@ -443,18 +481,33 @@ form {
 }
 
 #loginbtn {
-  position: fixed;
+  position: absolute;
   right: 100px;
 }
 #signupbtn {
-  position: fixed;
+  position: absolute;
   right: 250px;
+}
+.notfound {
+  align-items: center;
+  font-size: 1.5rem;
+
+  display: flex;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+.notfound:hover {
+  cursor: pointer;
 }
 .large-font {
   margin-top: 5%;
-  color: rgb(255, 82, 82);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
 }
+
 .submitBtn {
   padding: 10%;
   /* height: 20vh; */
@@ -469,6 +522,11 @@ form {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+hr {
+  margin: 0;
+  border: 1px solid white;
+  width: 45%;
 }
 .Login {
   justify-content: center;

@@ -38,7 +38,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="create2">
+    <div className="create2 background">
       <div className="contact-form">
         <h2>Have some query? Write here🧑‍⚕️</h2>
         <form onSubmit={handlesubmit}>

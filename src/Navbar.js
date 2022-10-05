@@ -8,6 +8,7 @@ const Navbar = () => {
       <h1 className="vchc-heading">Veeral Child Heart Centre</h1>
       <div className="navbar-placement">
         <div className="navbar">
+          <hr></hr>
           <Link to="/" className="nav-items">
             Home
           </Link>

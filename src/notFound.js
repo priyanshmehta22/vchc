@@ -4,9 +4,13 @@ import React from "react";
 const NotFound = () => {
   return (
     <div className="notfound">
-      <h2>Sorry </h2>
-      <h2>Page not found</h2>
-      <Link to="/">Back to Home?</Link>
+      <Link to="/">
+        {/* <p>HOME</p> */}
+        <img
+          src="https://img.freepik.com/free-vector/404-error-abstract-concept-illustration_335657-2243.jpg?size=338&ext=jpg"
+          alt="not found"
+        />
+      </Link>
     </div>
   );
 };
