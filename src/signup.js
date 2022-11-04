@@ -46,8 +46,9 @@ const Signup = (loggedin) => {
   }
   return (
     <div className="Login center">
+      <center><h1>SIGNUP</h1></center>
       <Form onSubmit={handlesubmit}>
-        <Form.Group size="lg" controlId="name">
+        <Form.Group size="lg" className="font" controlId="name">
           <Form.Label>
             <b>NAME </b>
           </Form.Label>
@@ -61,7 +62,7 @@ const Signup = (loggedin) => {
             onChange={(e) => setname(e.target.value)}
           />
         </Form.Group>
-        <Form.Group size="lg" controlId="email">
+        <Form.Group size="lg" className="font" controlId="email">
           <Form.Label>
             <b>EMAIL </b>
           </Form.Label>

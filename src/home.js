@@ -1,7 +1,9 @@
 import React from "react";
+import Admin from "./admin";
 
 const Home = () => {
   return (
+    
     <div className="intro-text">
       <p id="intro-heading">
         <h2 id="red">Oh Precious Heart!</h2>I Promise To Take Care Of You Since

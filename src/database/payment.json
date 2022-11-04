@@ -1,0 +1,19 @@
+{
+  "payment": [
+    {
+      "name": "John Doe",
+      "money": 500,
+      "id": 1
+    },
+    {
+      "name": "Jane Doe",
+      "money": 500,
+      "id": 2
+    },
+    {
+      "name": "Priyansh Mehta",
+      "money": "500 (consultation)",
+      "id": 3
+    }
+  ]
+}

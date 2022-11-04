@@ -80,7 +80,7 @@ const ContactUs = () => {
             value={message}
             onChange={(e) => setmessage(e.target.value)}
           ></textarea>
-          {!isloading && <button>Add Query</button>}
+          {!isloading && <button className="addquerybtn">Add Query</button>}
           {isloading && <button restricted>Adding Query...</button>}
         </form>
       </div>

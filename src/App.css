@@ -10,14 +10,88 @@
   padding-top: 4%;
   background-color: rgb(255, 73, 73);
 }
-
+.parentloginclass{
+  margin:5% auto;
+}
+.mn{
+  position: relative;
+  left:20px;
+} 
+.main{
+  display:flex;
+  width:100%;
+  margin:0;
+  position: fixed;
+  /* left:50%; */
+}
+.payment{
+  width:50%;
+}
 .nav-items {
   color: white;
   text-decoration: none;
   padding: 2%;
   margin: 0;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
+
+#register, #login {
+  width: 50%;
+  height: 30rem;
+  border: 1px solid #d6d7da;
+  padding: 0px 15px 15px 15px;
+  border-radius: 5px;
+  font-family: arial;
+  line-height: 14px;
+  color: #333333;
+  font-size: 1rem;
+  background: #ffffff;
+  margin: 5% auto;
+}
+#main-registration-container{
+  display: flex;
+  flex-direction: row;
+}
+.adminimg{
+  margin:1.5%;
+}
+
+.admin label, .admin input {
+  display: block;
+  margin-bottom: 1%;
+  width: 90%;
+  height: 6%;
+  font-size: 2rem;
+}
+
+.admin input {
+  padding: 1%;
+  border: solid 1px #BDC7D8;
+
+}
+
+.buttonadmin {
+  background-color: #00BFFF;
+  border-color: #3ac162;
+  font-weight: bold;
+  padding: 12px 15px;
+  color: #ffffff;
+  height: 10%;
+  width:70%;
+  margin: 1% auto;
+}
+
+
+.errorMsg {
+  color: #cc0000;
+  margin-bottom: 12px;
+}
+
+.sucessMsg {
+  color: #6B8E23;
+  margin-bottom: 10px;
+}
+
 .nav-items:hover {
   color: black;
 }
@@ -41,12 +115,13 @@
   display: flex;
   font-size: large;
   flex-direction: row;
+  font-size: 1.4rem;
 }
 
 #intro-heading {
   text-align: center;
   /* padding-bottom: 30px; */
-  font-size: large;
+  font-size: 1.5rem;
   /* background-color: lightblue; */
 }
 #degrees {
@@ -88,6 +163,12 @@
   100% {
     left: 5%;
   }
+}
+#notfound:hover{
+  transition: 8s;
+  transform: rotate(360deg);
+  /* transform: scale(1.5); */
+
 }
 
 .rate {
@@ -422,8 +503,7 @@ textarea {
   box-shadow: 3px 3px 3px 3px white;
   /* transform: scale(1.1); */
 }
-.revrat {
-}
+
 .red {
   color: white;
   font-size: 1.7rem;
@@ -534,6 +614,7 @@ hr {
   margin: auto;
 }
 .inputsignup {
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 50%;
@@ -544,14 +625,29 @@ hr {
 .ph {
   position: relative;
   right: 18px;
+  font-size: 1.3rem;
+}
+.phone{
+  position: relative;
+  left: 11px;
 }
 .pass {
   position: relative;
   right: 20px;
+  font-size: 1.3rem;
+}
+#em{
+  font-size: 1.3rem;
+  position: relative;
+  left:6px;
+}
+.font{
+  font-size:1.3rem;
 }
 .con {
   position: relative;
   right: 59px;
+  font-size: 1.3rem;
 }
 .signupbtn {
   position: fixed;
@@ -560,16 +656,21 @@ hr {
   width: 60%;
 }
 .signupbtn2 {
+  /* padding-top: */
   position: fixed;
-  right: 20%;
-  top: 55%;
-  width: 60%;
+  right: 30%;
+  top: 70%;
+  width: 40%;
+}
+.loginsignupback{
+  
 }
 .signupbtn3 {
-  position: fixed;
-  right: 20%;
-  top: 80%;
-  width: 60%;
+  position: relative;
+  left: 40%;
+  /* top: 90%; */
+  width: 30%;
+  margin-bottom: 2%;
 }
 .pa {
   position: relative;
@@ -583,7 +684,139 @@ hr {
   position: relative;
   right: 21px;
 }
+.gd{
+  position: relative;
+  left: 25px;
+}
+
+.container .h8 {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
+.paytmimg{
+  background-image: url("paytm.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 13rem;
+  width: 13rem;
+  margin:5%;
+
+}
+.paytmimg:hover{
+  transition: 1s;
+transform: scale(1.2);
+
+}
+
+#scantxt{
+  margin: 1%;
+  font-size: 1.1rem;
+}
+
+.buttonpay {
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 1%;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.buttonpaydiv{
+  align-items: center;
+}
+.buttonpay:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.buttonpay:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.btn.btn-primary {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  border: none;
+}
 .at {
   position: relative;
   right: 21px;
 }
+button{
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  padding: 4%;
+  width: 40%; 
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.addquerybtn{
+  position: relative;
+  left:30%;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  padding: 4%;
+  width: 40%; 
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
+
+
+

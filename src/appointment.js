@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { useHistory } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
+import Login from './login';
+
+
 const Appointment = () => {
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [pname, setPname] = useState("");
   const [age, setAge] = useState("");
+  const [blood, setblood]= useState("");
+  const [gender, setgender] = useState("");
+  const [phone, setphone] = useState("");
   const [isloading, setisloading] = useState(false);
   const history = useHistory();
+  
+
+  
+
+
   const handlesubmit = (e) => {
     e.preventDefault();
 
-    var patients = { pname, age, date, time };
+    let patients = {pname,blood,gender, age, date, time, phone };
     setisloading(true);
     console.log("patients: " + patients);
+
 
     fetch("http://localhost:8004/patients", {
       method: "POST",
@@ -29,17 +42,38 @@ const Appointment = () => {
         setisloading(false);
 
         // history.go(-1);
-        history.push("/");
+        window.location.href = "/payment";
       })
       .catch((error) => {
         console.log(error);
       });
+      let templateParams = {
+        to_name: pname,
+        to_date: date,
+        to_time: time,
+    
+      };
+    
+      emailjs.send('service_k14rp0b', 'template_u58ojrh', templateParams,'8toInmAio3APvbxYe')
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+
+        emailjs.send('service_k14rp0b', 'template_u58ojrh', templateParams,'8toInmAio3APvbxYe')
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+
     window.alert("Appointment booked successfully");
   };
 
   return (
     <div className="Login center">
-      <Form onSubmit={handlesubmit}>
+      <form onSubmit={handlesubmit}>
         <Form.Group size="lg" controlId="name">
           <Form.Label>
             <b>PATIENT NAME</b>
@@ -54,6 +88,45 @@ const Appointment = () => {
             onChange={(e) => setPname(e.target.value)}
           />
         </Form.Group>
+        <Form.Group size="lg" controlId="name">
+          <Form.Label>
+            <b>PHONE NO: </b>
+          </Form.Label>
+
+          <Form.Control
+            
+            required
+            className="inputsignup phone"
+            type="text"
+            value={phone}
+            onChange={(e) => setphone(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group size="lg" controlId="blood">
+          <Form.Label>
+            <b>BLOOD GROUP</b>
+          </Form.Label>
+
+          <Form.Control
+            required
+            className="inputsignup pn"
+            type="text"
+            value={blood}
+            onChange={(e) => setblood(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group size="lg" controlId="gender">
+          <Form.Label>
+            <b>GENDER</b>
+            </Form.Label>
+            <Form.Control
+            required
+            className="inputsignup gd"
+            type="text"
+            value={gender}
+            onChange={(e) => setgender(e.target.value)}
+          />
+            </Form.Group>
 
         <Form.Group size="lg" controlId="age">
           <Form.Label>
@@ -95,15 +168,7 @@ const Appointment = () => {
         </Form.Group>
         <div className="signupbtn3">
           {!isloading && (
-            <Button
-              className="inputsignup"
-              block
-              size="lg"
-              type="submit"
-              id="submitlogin"
-            >
-              Submit
-            </Button>
+             <button>SUBMIT</button>
           )}
         </div>
         {isloading && (
@@ -111,7 +176,7 @@ const Appointment = () => {
             Booking Appointment..
           </Button>
         )}
-      </Form>
+      </form>
     </div>
   );
 };

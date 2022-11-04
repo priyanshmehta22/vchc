@@ -19,7 +19,7 @@ const Bookappointment = () => {
           </Link>
         </div>
       </div>
-      <p className="large-font ">
+      <p className="large-font">
         To book an appointment, Login/ SignUp. You will receive a confirmation
         message for the appointment.
       </p>

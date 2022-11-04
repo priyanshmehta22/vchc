@@ -9,6 +9,9 @@ import Bookappointment from "./bookappointment";
 import Signup from "./signup";
 import Login from "./login";
 import Appointment from "./appointment";
+import Admin from "./admin";
+import Payment from "./payment";
+import Admindb from "./admindb";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route exact path="/admin">
+            <Admin />
+          </Route>
           <Route exact path="/contact">
             <ContactUs />
           </Route>
@@ -28,6 +34,12 @@ function App() {
           <Route exact path="/reviews">
             <Reviews />
           </Route>
+          <Route exact path="/payment">
+            <Payment />
+          </Route>
+          <Route exact path="/admindb">
+            <Admindb />
+            </Route> 
           <Route exact path="/login">
             <Login />
           </Route>

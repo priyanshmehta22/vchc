@@ -9,6 +9,9 @@ const Navbar = () => {
       <div className="navbar-placement">
         <div className="navbar">
           <hr></hr>
+          <Link to="/admin" className="nav-items">
+            Admin
+          </Link>
           <Link to="/" className="nav-items">
             Home
           </Link>

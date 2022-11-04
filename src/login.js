@@ -37,9 +37,11 @@ const Login = () => {
     // window.location.href = "/";
   };
   return (
+    <div className="parentloginclass">
+    <center><h1>LOGIN FORM</h1></center>
     <div className="Login center">
       <Form onSubmit={handlesubmit}>
-        <Form.Group size="lg" controlId="email">
+        <Form.Group size="lg" id="em" controlId="email">
           <Form.Label>
             <b>EMAIL </b>
           </Form.Label>
@@ -87,6 +89,8 @@ const Login = () => {
         )}
       </Form>
     </div>
+    </div>
+
   );
 };
 
