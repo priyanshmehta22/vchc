@@ -108,6 +108,7 @@ const Appointment = () => {
           </Form.Label>
 
           <Form.Control
+         
             required
             className="inputsignup pn"
             type="text"
@@ -115,12 +116,14 @@ const Appointment = () => {
             onChange={(e) => setblood(e.target.value)}
           />
         </Form.Group>
+
         <Form.Group size="lg" controlId="gender">
           <Form.Label>
             <b>GENDER</b>
             </Form.Label>
             <Form.Control
             required
+            placeholder="Male/Female"
             className="inputsignup gd"
             type="text"
             value={gender}

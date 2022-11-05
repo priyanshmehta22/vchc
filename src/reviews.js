@@ -75,6 +75,7 @@ const Reviews = (review) => {
         </label>
         <input
           autoFocus
+          className="reviewname"
           type="text"
           value={name}
           onChange={(e) => setname(e.target.value)}
@@ -85,6 +86,7 @@ const Reviews = (review) => {
           <h3>MESSAGE</h3>
         </label>
         <textarea
+        className="reviewmessage"
           required
           value={message}
           onChange={(e) => setmessage(e.target.value)}

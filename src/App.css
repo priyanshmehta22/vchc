@@ -408,7 +408,7 @@ code {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin-bottom: 2%;
   height: 120vh;
   width: 100%;
   background-image: url("https://img.freepik.com/free-photo/collage-customer-experience-concept_23-2149367139.jpg?w=996&t=st=1664863175~exp=1664863775~hmac=79675d3f06dba7569c471f35d7a0ed9c26b473d7916ae5b741942d947e2b0c26");
@@ -434,25 +434,28 @@ code {
 .create input,
 .create textarea,
 .create select {
-  margin: 1%;
-  font-size: 1.2rem;
-  height: 100%;
-
-  padding: 15%;
+  margin: 0;
+  font-size: 1.4rem;
+  height: 10%;
+  
+  /* padding: 1%; */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-form {
+.create form {
   display: flex;
   flex-direction: column;
   margin: auto;
-
-  height: 100%;
+  height: 50%;
+  font-size: 1.5rem;
 }
 
 .create button {
-  margin: 10px;
-  padding: 10px;
+  position: relative;
+  right:  7%;
+  margin: 20px;
+  width: 100%;
+  padding-bottom: 10%;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: rgb(243, 82, 82);
@@ -511,6 +514,7 @@ textarea {
 }
 .white {
   color: white;
+  margin:0;
   /* font-size: 1.3rem; */
 }
 .reviews {
@@ -588,13 +592,7 @@ textarea {
   font-size: 2rem;
 }
 
-.submitBtn {
-  padding: 10%;
-  /* height: 20vh; */
-  margin: 5%;
-  font-size: 1.2rem;
-  color: white;
-}
+
 .submitBtn:hover {
   color: black;
 }
@@ -655,16 +653,8 @@ hr {
   top: 90%;
   width: 60%;
 }
-.signupbtn2 {
-  /* padding-top: */
-  position: fixed;
-  right: 30%;
-  top: 70%;
-  width: 40%;
-}
-.loginsignupback{
-  
-}
+
+
 .signupbtn3 {
   position: relative;
   left: 40%;
@@ -815,8 +805,13 @@ button:active:after {
   opacity: 1;
   transition: 0s
 }
-
-
+.signupbtn2 {
+  /* padding-top: */
+  position: fixed;
+  right: 30%;
+  top: 70%;
+  width: 40%;
+}
 
 
 

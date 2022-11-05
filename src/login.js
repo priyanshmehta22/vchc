@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
+import Appointment from "./appointment";
+// import fs from "fs";
+
 const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -10,10 +13,28 @@ const Login = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-
+    let patients = {pname,blood,gender, age, date, time, phone };
     var login = { email, password };
     setisloading(true);
     console.log("logged in: " + login);
+
+    fetch("http://localhost:8004/patients", {
+      method: "GET",
+      body: JSON.stringify(patients),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }) .then((response) => {
+      console.log(response);
+      console.log("logged in");
+      setisloading(false);
+      // history.push("/appointment");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  
+
 
     fetch("http://localhost:8005/login", {
       method: "POST",
