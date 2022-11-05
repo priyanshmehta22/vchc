@@ -10,6 +10,15 @@ const Login = () => {
   const [password, setpassword] = useState("");
   const [isloading, setisloading] = useState(false);
   const history = useHistory();
+  const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
+  const [pname, setPname] = useState("");
+  const [age, setAge] = useState("");
+  const [blood, setblood]= useState("");
+  const [gender, setgender] = useState("");
+  const [phone, setphone] = useState("");
+  // const [isloading, setisloading] = useState(false);
+  // const history = useHistory();
 
   const handlesubmit = (e) => {
     e.preventDefault();
