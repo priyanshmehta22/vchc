@@ -1,33 +1,27 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { useHistory } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
-import Login from './login';
-
+import Login from "./login";
 
 const Appointment = () => {
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [pname, setPname] = useState("");
   const [age, setAge] = useState("");
-  const [blood, setblood]= useState("");
+  const [blood, setblood] = useState("");
   const [gender, setgender] = useState("");
   const [phone, setphone] = useState("");
   const [isloading, setisloading] = useState(false);
   const history = useHistory();
-  
-
-  
-
 
   const handlesubmit = (e) => {
     e.preventDefault();
 
-    let patients = {pname,blood,gender, age, date, time, phone };
+    let patients = { pname, blood, gender, age, date, time, phone };
     setisloading(true);
     console.log("patients: " + patients);
-
 
     fetch("http://localhost:8004/patients", {
       method: "POST",
@@ -47,26 +41,43 @@ const Appointment = () => {
       .catch((error) => {
         console.log(error);
       });
-      let templateParams = {
-        to_name: pname,
-        to_date: date,
-        to_time: time,
-    
-      };
-    
-      emailjs.send('service_k14rp0b', 'template_u58ojrh', templateParams,'8toInmAio3APvbxYe')
-        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-          console.log('FAILED...', error);
-        });
+    let templateParams = {
+      to_name: pname,
+      to_date: date,
+      to_time: time,
+    };
 
-        emailjs.send('service_k14rp0b', 'template_u58ojrh', templateParams,'8toInmAio3APvbxYe')
-        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-          console.log('FAILED...', error);
-        });
+    emailjs
+      .send(
+        "service_k14rp0b",
+        "template_u58ojrh",
+        templateParams,
+        "8toInmAio3APvbxYe"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+
+    emailjs
+      .send(
+        "service_k14rp0b",
+        "template_u58ojrh",
+        templateParams,
+        "8toInmAio3APvbxYe"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
 
     window.alert("Appointment booked successfully");
   };
@@ -94,7 +105,6 @@ const Appointment = () => {
           </Form.Label>
 
           <Form.Control
-            
             required
             className="inputsignup phone"
             type="text"
@@ -108,7 +118,6 @@ const Appointment = () => {
           </Form.Label>
 
           <Form.Control
-         
             required
             className="inputsignup pn"
             type="text"
@@ -120,8 +129,8 @@ const Appointment = () => {
         <Form.Group size="lg" controlId="gender">
           <Form.Label>
             <b>GENDER</b>
-            </Form.Label>
-            <Form.Control
+          </Form.Label>
+          <Form.Control
             required
             placeholder="Male/Female"
             className="inputsignup gd"
@@ -129,7 +138,7 @@ const Appointment = () => {
             value={gender}
             onChange={(e) => setgender(e.target.value)}
           />
-            </Form.Group>
+        </Form.Group>
 
         <Form.Group size="lg" controlId="age">
           <Form.Label>
@@ -170,9 +179,7 @@ const Appointment = () => {
           />
         </Form.Group>
         <div className="signupbtn3">
-          {!isloading && (
-             <button>SUBMIT</button>
-          )}
+          {!isloading && <button>SUBMIT</button>}
         </div>
         {isloading && (
           <Button className="signupbtn3" restricted>
