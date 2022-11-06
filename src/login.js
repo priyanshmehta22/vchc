@@ -36,8 +36,12 @@ const Login = () => {
     });
     console.log(isUserPresent);
     if (!isUserPresent) {
+      alert("USER NOT FOUND, SIGNUP!");
       console.log("User Does Not Exist");
       window.location.href = "/signup";
+    }
+    else{
+      window.location.href = "/appointment"; 
     }
     fetch("http://localhost:8005/login", {
       method: "POST",
@@ -52,7 +56,7 @@ const Login = () => {
         setisloading(false);
 
         // history.go(-1);
-        history.push("/appointment");
+    
       })
       .catch((error) => {
         console.log(error);
