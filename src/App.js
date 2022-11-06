@@ -11,7 +11,7 @@ import Login from "./login";
 import Appointment from "./appointment";
 import Admin from "./admin";
 import Payment from "./payment";
-import Admindb from "./admindb";
+import { AdminDashboard } from "./admindb";
 
 function App() {
   return (
@@ -20,7 +20,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/">
-            <Home />
+            {/* <Home /> */}
+            <AdminDashboard />
           </Route>
           <Route exact path="/admin">
             <Admin />
@@ -38,8 +39,8 @@ function App() {
             <Payment />
           </Route>
           <Route exact path="/admindb">
-            <Admindb />
-            </Route> 
+            <AdminDashboard />
+          </Route>
           <Route exact path="/login">
             <Login />
           </Route>

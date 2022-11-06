@@ -1,13 +1,6 @@
 {
   "patients": [
     {
-      "name": "Priyansh",
-      "age": "19",
-      "date": "14-6-2022",
-      "time": "10:00 AM",
-      "id": "1"
-    },
-    {
       "pname": "Priyansh Mehta",
       "age": "20",
       "date": "2022-09-07",
