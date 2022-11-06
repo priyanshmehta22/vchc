@@ -64,4 +64,4 @@ const AdminDashboard = () => {
   );
 };
 
-export { AdminDashboard };
+export default AdminDashboard;

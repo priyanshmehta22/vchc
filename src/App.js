@@ -11,7 +11,7 @@ import Login from "./login";
 import Appointment from "./appointment";
 import Admin from "./admin";
 import Payment from "./payment";
-import { AdminDashboard } from "./admindb";
+import  AdminDashboard  from "./admindb";
 
 function App() {
   return (
